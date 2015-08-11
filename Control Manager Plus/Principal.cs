@@ -13,11 +13,11 @@ using Control_Manager_Plus.Classes;
 
 namespace Control_Manager_Plus
 {
-    public partial class frmPrincipal : Form
+    public partial class Principal : Form
     {
         private int childFormNumber = 0;
 
-        public frmPrincipal()
+        public Principal()
         {
             InitializeComponent();
         }
