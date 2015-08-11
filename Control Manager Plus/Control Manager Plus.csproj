@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B52B5197-7A3C-45E4-99FC-9F4DE3BF5DB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Control_Manager_Plus</RootNamespace>
+    <AssemblyName>Control Manager Plus</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MySql.Data, Version=6.3.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AFGuardiao\AFGuardiao\Mysql\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.3.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AFGuardiao\AFGuardiao\Mysql\v4.0\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6">
+      <HintPath>..\..\..\AFGuardiao\AFGuardiao\Mysql\v4.0\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.3.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AFGuardiao\AFGuardiao\Mysql\v4.0\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BancoDados.cs" />
+    <Compile Include="Classes\DistDetalhe.cs" />
+    <Compile Include="Classes\Distribuicao.cs" />
+    <Compile Include="Classes\Empresa.cs" />
+    <Compile Include="Classes\Fornecedores.cs" />
+    <Compile Include="Classes\Funcoes.cs" />
+    <Compile Include="Classes\Lista.cs" />
+    <Compile Include="Classes\Lojas.cs" />
+    <Compile Include="Classes\Produtos.cs" />
+    <Compile Include="Classes\Relatorios\RelatorioDetalheDistribuicao.cs" />
+    <Compile Include="Classes\Relatorios\ResumoProdDistribuicao.cs" />
+    <Compile Include="Forms\Antigos\CadastroDistribuicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Antigos\CadastroDistribuicao.Designer.cs">
+      <DependentUpon>CadastroDistribuicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadastroEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadastroEmpresa.Designer.cs">
+      <DependentUpon>CadastroEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Antigos\CadastroLojas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Antigos\CadastroLojas.Designer.cs">
+      <DependentUpon>CadastroLojas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Antigos\CadastroFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Antigos\CadastroFornecedores.Designer.cs">
+      <DependentUpon>CadastroFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadDistribuicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadDistribuicao.Designer.cs">
+      <DependentUpon>frmCadDistribuicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadFornecedores.Designer.cs">
+      <DependentUpon>frmCadFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadLojas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadLojas.Designer.cs">
+      <DependentUpon>frmCadLojas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCadProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCadProdutos.Designer.cs">
+      <DependentUpon>frmCadProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Antigos\CadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Antigos\CadastroProduto.Designer.cs">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DistribuicaoLojas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DistribuicaoLojas.Designer.cs">
+      <DependentUpon>DistribuicaoLojas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Antigos\frmModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Antigos\frmModelo.Designer.cs">
+      <DependentUpon>frmModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDistribuicaoPorLoja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDistribuicaoPorLoja.Designer.cs">
+      <DependentUpon>frmDistribuicaoPorLoja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Antigos\CadastroDistribuicao.resx">
+      <DependentUpon>CadastroDistribuicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CadastroEmpresa.resx">
+      <DependentUpon>CadastroEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Antigos\CadastroLojas.resx">
+      <DependentUpon>CadastroLojas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Antigos\CadastroFornecedores.resx">
+      <DependentUpon>CadastroFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadDistribuicao.resx">
+      <DependentUpon>frmCadDistribuicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadFornecedores.resx">
+      <DependentUpon>frmCadFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadLojas.resx">
+      <DependentUpon>frmCadLojas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCadProdutos.resx">
+      <DependentUpon>frmCadProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Antigos\CadastroProduto.resx">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DistribuicaoLojas.resx">
+      <DependentUpon>DistribuicaoLojas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Antigos\frmModelo.resx">
+      <DependentUpon>frmModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDistribuicaoPorLoja.resx">
+      <DependentUpon>frmDistribuicaoPorLoja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relatorio\DistribuicaoDetalhe.rdlc" />
+    <EmbeddedResource Include="Relatorio\Fornecedores.rdlc" />
+    <EmbeddedResource Include="Relatorio\Lojas.rdlc" />
+    <EmbeddedResource Include="Relatorio\Produto.rdlc" />
+    <EmbeddedResource Include="Relatorio\TESTE.rdlc" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\Control_Manager_Plus.Classes.DistDetalhe.datasource" />
+    <None Include="Properties\DataSources\Control_Manager_Plus.Classes.Relatorios.RelatorioDetalheDistribuicao.datasource" />
+    <None Include="Properties\DataSources\Control_Manager_Plus.Classes.Relatorios.ResumoProdDistribuicao.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOPO_TELA1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOPO_TELA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FUNDO_TELA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frutas-e-verduras-imagem-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\destaque12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NovoLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seta1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_unmount.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
