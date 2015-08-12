@@ -48,7 +48,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tbSalvar = new System.Windows.Forms.ToolStripButton();
-            this.tbAlterar = new System.Windows.Forms.ToolStripButton();
+            this.tbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tbImprimir = new System.Windows.Forms.ToolStripButton();
             this.tbVoltar = new System.Windows.Forms.ToolStripButton();
             this.DistDetalheBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -166,7 +166,7 @@
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbSalvar,
-            this.tbAlterar,
+            this.tbCancelar,
             this.tbImprimir,
             this.tbVoltar});
             toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
@@ -187,20 +187,22 @@
             this.tbSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbSalvar.Name = "tbSalvar";
             this.tbSalvar.Size = new System.Drawing.Size(68, 81);
-            this.tbSalvar.Text = "Incluir";
+            this.tbSalvar.Text = "Salvar";
             this.tbSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbSalvar.ToolTipText = "Clique parar incluir um registro";
+            this.tbSalvar.Click += new System.EventHandler(this.tbSalvar_Click);
             // 
-            // tbAlterar
+            // tbCancelar
             // 
-            this.tbAlterar.Image = ((System.Drawing.Image)(resources.GetObject("tbAlterar.Image")));
-            this.tbAlterar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tbAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbAlterar.Name = "tbAlterar";
-            this.tbAlterar.Size = new System.Drawing.Size(68, 81);
-            this.tbAlterar.Text = "Alterar";
-            this.tbAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tbAlterar.ToolTipText = "Clique para alterar um registro";
+            this.tbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tbCancelar.Image")));
+            this.tbCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbCancelar.Name = "tbCancelar";
+            this.tbCancelar.Size = new System.Drawing.Size(68, 83);
+            this.tbCancelar.Text = "Cancelar";
+            this.tbCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tbCancelar.ToolTipText = "Clique para alterar um registro";
+            this.tbCancelar.Click += new System.EventHandler(this.tbCancelar_Click);
             // 
             // tbImprimir
             // 
@@ -208,7 +210,7 @@
             this.tbImprimir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbImprimir.Name = "tbImprimir";
-            this.tbImprimir.Size = new System.Drawing.Size(68, 81);
+            this.tbImprimir.Size = new System.Drawing.Size(68, 83);
             this.tbImprimir.Text = "Imprimir";
             this.tbImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbImprimir.ToolTipText = "Clique para imprimir ";
@@ -220,7 +222,7 @@
             this.tbVoltar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbVoltar.Name = "tbVoltar";
-            this.tbVoltar.Size = new System.Drawing.Size(68, 81);
+            this.tbVoltar.Size = new System.Drawing.Size(68, 83);
             this.tbVoltar.Text = "Voltar";
             this.tbVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbVoltar.ToolTipText = "Retornar a tela anterior";
@@ -363,13 +365,14 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnExcluirLinhas);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtCodDistribuicao);
             this.groupBox1.Controls.Add(this.dtpDataSelecionada);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(416, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 54);
+            this.groupBox1.Size = new System.Drawing.Size(493, 54);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Distribuiçao";
@@ -841,31 +844,33 @@
             // btnGravarDistribuicao
             // 
             this.btnGravarDistribuicao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGravarDistribuicao.Location = new System.Drawing.Point(826, 26);
+            this.btnGravarDistribuicao.Location = new System.Drawing.Point(823, 22);
             this.btnGravarDistribuicao.Name = "btnGravarDistribuicao";
             this.btnGravarDistribuicao.Size = new System.Drawing.Size(53, 42);
             this.btnGravarDistribuicao.TabIndex = 11;
             this.btnGravarDistribuicao.Text = "Gravar Distribuição";
             this.btnGravarDistribuicao.UseVisualStyleBackColor = true;
+            this.btnGravarDistribuicao.Visible = false;
             this.btnGravarDistribuicao.Click += new System.EventHandler(this.btnGravarDistribuicao_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(767, 26);
+            this.btnCancelar.Location = new System.Drawing.Point(764, 22);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(53, 42);
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar [Sair]";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnExcluirLinhas
             // 
             this.btnExcluirLinhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluirLinhas.Location = new System.Drawing.Point(708, 26);
+            this.btnExcluirLinhas.Location = new System.Drawing.Point(346, 10);
             this.btnExcluirLinhas.Name = "btnExcluirLinhas";
-            this.btnExcluirLinhas.Size = new System.Drawing.Size(53, 42);
+            this.btnExcluirLinhas.Size = new System.Drawing.Size(141, 40);
             this.btnExcluirLinhas.TabIndex = 11;
             this.btnExcluirLinhas.Text = "Excluir Selecionados";
             this.btnExcluirLinhas.UseVisualStyleBackColor = true;
@@ -879,7 +884,7 @@
             this.lbAtencao.ForeColor = System.Drawing.Color.Black;
             this.lbAtencao.Location = new System.Drawing.Point(4, 15);
             this.lbAtencao.Name = "lbAtencao";
-            this.lbAtencao.Size = new System.Drawing.Size(207, 60);
+            this.lbAtencao.Size = new System.Drawing.Size(204, 60);
             this.lbAtencao.TabIndex = 109;
             this.lbAtencao.Text = "ATENÇÃO!";
             this.lbAtencao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -917,12 +922,8 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel1.Controls.Add(this.dtgLojas);
-            this.splitContainer1.Panel1.Controls.Add(this.btnExcluirLinhas);
-            this.splitContainer1.Panel1.Controls.Add(this.btnCancelar);
             this.splitContainer1.Panel1.Controls.Add(this.dtgSoma);
-            this.splitContainer1.Panel1.Controls.Add(this.btnGravarDistribuicao);
             this.splitContainer1.Panel1.Controls.Add(this.btnLancar);
             this.splitContainer1.Panel1.Controls.Add(this.lbTotal);
             this.splitContainer1.Panel1.Controls.Add(this.tabControl1);
@@ -930,6 +931,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.lbExluir1);
             this.splitContainer1.Panel1.Controls.Add(this.lbAtencao);
             this.splitContainer1.Panel1.Controls.Add(this.lbExluir2);
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             // 
             // splitContainer1.Panel2
             // 
@@ -976,7 +978,7 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Location = new System.Drawing.Point(0, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(32, 39);
+            this.panel4.Size = new System.Drawing.Size(34, 39);
             this.panel4.TabIndex = 116;
             // 
             // label8
@@ -987,7 +989,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(3, 2);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 36);
+            this.label8.Size = new System.Drawing.Size(136, 36);
             this.label8.TabIndex = 96;
             this.label8.Text = "RELATÓRIO";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1032,7 +1034,7 @@
             "Produto especifico."});
             this.comboBox1.Location = new System.Drawing.Point(4, 64);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(22, 21);
+            this.comboBox1.Size = new System.Drawing.Size(24, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -1046,7 +1048,7 @@
             "Produto especifico."});
             this.comboBox2.Location = new System.Drawing.Point(4, 108);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(22, 21);
+            this.comboBox2.Size = new System.Drawing.Size(24, 21);
             this.comboBox2.TabIndex = 118;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -1068,6 +1070,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.DimGray;
             this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.btnGravarDistribuicao);
+            this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Location = new System.Drawing.Point(90, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(912, 75);
@@ -1211,7 +1215,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripButton tbSalvar;
-        private System.Windows.Forms.ToolStripButton tbAlterar;
+        private System.Windows.Forms.ToolStripButton tbCancelar;
         private System.Windows.Forms.ToolStripButton tbImprimir;
         private System.Windows.Forms.ToolStripButton tbVoltar;
         private System.Windows.Forms.Panel panel2;

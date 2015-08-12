@@ -993,6 +993,44 @@ namespace Control_Manager_Plus.Forms
             GerarRelatorio();
         }
 
+        private void tbSalvar_Click(object sender, EventArgs e)
+        {
+
+            switch (_ModoOperacao)
+            {
+                case 2:
+                    if (EditarRegistros())
+                    {
+                        MessageBox.Show("Distribuição Editada com sucesso!");
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("erro ao editar");
+                    }
+
+                    break;
+                case 3:
+                    if (ExcluirRegistro())
+                    {
+                        MessageBox.Show("Distribuição Excluída com sucesso!");
+                        Close();
+                    }
+                    break;
+                default:
+                    if (Gravar_distribuicao())
+                    {
+                        Close();
+                    }
+                    break;
+            }
+        }
+
+        private void tbCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
        
             
 
