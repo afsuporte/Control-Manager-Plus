@@ -48,7 +48,7 @@ namespace Control_Manager_Plus.Forms
             LimparDados();
 
             btn01.Enabled = true;
-            btn01.Text = "Salvar Fornecedor";
+            btn01.Text = "Salvar Produto";
             btn02.Text = "Cancelar Inclusão";
         }
 
@@ -493,6 +493,11 @@ namespace Control_Manager_Plus.Forms
 
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cadastrar Fornecedor e Atualizar o Grid Automaticamente");
+        }
 
        
 

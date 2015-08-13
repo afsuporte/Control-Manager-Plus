@@ -241,10 +241,31 @@ namespace Control_Manager_Plus
 
         private void toolStrip_Sair_Click(object sender, EventArgs e)
         {
+            DialogResult Sair = MessageBox.Show("Deseja Fechar o Sistema?",
+              "Sair do Sistema?",
+              MessageBoxButtons.YesNo);
 
+            if (Sair == DialogResult.Yes)
+
+                Application.Exit();  
         }
 
         #endregion
+
+        private void toolStripStatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vendasPorFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Relatorio de Vendas por Fornecedor");
+        }
+
+        private void vendasPorLojaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Relatorio de Vendas por Lojas");
+        }
 
        
 

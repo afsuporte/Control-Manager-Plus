@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ToolStrip toolStrip1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadFornecedores));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tbIncluir = new System.Windows.Forms.ToolStripButton();
             this.tbAlterar = new System.Windows.Forms.ToolStripButton();
             this.tbExcluir = new System.Windows.Forms.ToolStripButton();
@@ -136,7 +136,7 @@
             this.tbIncluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbIncluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbIncluir.Name = "tbIncluir";
-            this.tbIncluir.Size = new System.Drawing.Size(68, 81);
+            this.tbIncluir.Size = new System.Drawing.Size(68, 83);
             this.tbIncluir.Text = "Incluir";
             this.tbIncluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbIncluir.ToolTipText = "Clique parar incluir um registro";
@@ -148,7 +148,7 @@
             this.tbAlterar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbAlterar.Name = "tbAlterar";
-            this.tbAlterar.Size = new System.Drawing.Size(68, 81);
+            this.tbAlterar.Size = new System.Drawing.Size(68, 83);
             this.tbAlterar.Text = "Alterar";
             this.tbAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbAlterar.ToolTipText = "Clique para alterar um registro";
@@ -160,7 +160,7 @@
             this.tbExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbExcluir.Name = "tbExcluir";
-            this.tbExcluir.Size = new System.Drawing.Size(68, 81);
+            this.tbExcluir.Size = new System.Drawing.Size(68, 83);
             this.tbExcluir.Text = "Excluir";
             this.tbExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbExcluir.ToolTipText = "Clique para excluir um registro";
@@ -172,7 +172,7 @@
             this.tbAtualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbAtualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbAtualizar.Name = "tbAtualizar";
-            this.tbAtualizar.Size = new System.Drawing.Size(68, 81);
+            this.tbAtualizar.Size = new System.Drawing.Size(68, 83);
             this.tbAtualizar.Text = "Atualizar";
             this.tbAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbAtualizar.ToolTipText = "Clique para Atualizar os registros";
@@ -184,7 +184,7 @@
             this.tbImprimir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbImprimir.Name = "tbImprimir";
-            this.tbImprimir.Size = new System.Drawing.Size(68, 81);
+            this.tbImprimir.Size = new System.Drawing.Size(68, 83);
             this.tbImprimir.Text = "Imprimir";
             this.tbImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbImprimir.ToolTipText = "Clique para imprimir ";
@@ -196,7 +196,7 @@
             this.tbVoltar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbVoltar.Name = "tbVoltar";
-            this.tbVoltar.Size = new System.Drawing.Size(68, 81);
+            this.tbVoltar.Size = new System.Drawing.Size(68, 83);
             this.tbVoltar.Text = "Voltar";
             this.tbVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbVoltar.ToolTipText = "Retornar a tela anterior";
@@ -370,8 +370,8 @@
             // 
             // dtgFornecedores
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtgFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtgFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgFornecedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -399,8 +399,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "E_Id";
-            dataGridViewCellStyle8.NullValue = "000000";
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.NullValue = "000000";
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn1.FillWeight = 50F;
             this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "Código";
@@ -666,7 +666,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(0, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(28, 39);
+            this.panel4.Size = new System.Drawing.Size(30, 39);
             this.panel4.TabIndex = 116;
             // 
             // label3
@@ -677,7 +677,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 36);
+            this.label3.Size = new System.Drawing.Size(136, 36);
             this.label3.TabIndex = 96;
             this.label3.Text = "RELATÓRIO";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -722,7 +722,7 @@
             "Produto especifico."});
             this.comboBox1.Location = new System.Drawing.Point(4, 64);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(14, 21);
+            this.comboBox1.Size = new System.Drawing.Size(16, 21);
             this.comboBox1.TabIndex = 2;
             // 
             // comboBox2
@@ -735,16 +735,16 @@
             "Produto especifico."});
             this.comboBox2.Location = new System.Drawing.Point(4, 108);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(14, 21);
+            this.comboBox2.Size = new System.Drawing.Size(16, 21);
             this.comboBox2.TabIndex = 118;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.FornecedoresBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.FornecedoresBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Control_Manager_Plus.Relatorio.Fornecedores.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";

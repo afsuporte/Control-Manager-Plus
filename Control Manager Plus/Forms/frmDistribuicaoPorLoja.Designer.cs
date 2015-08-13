@@ -177,7 +177,7 @@
             this.tbIncluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbIncluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbIncluir.Name = "tbIncluir";
-            this.tbIncluir.Size = new System.Drawing.Size(68, 81);
+            this.tbIncluir.Size = new System.Drawing.Size(68, 83);
             this.tbIncluir.Text = "Incluir";
             this.tbIncluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbIncluir.ToolTipText = "Clique parar incluir um registro";
@@ -188,7 +188,7 @@
             this.tbAlterar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbAlterar.Name = "tbAlterar";
-            this.tbAlterar.Size = new System.Drawing.Size(68, 81);
+            this.tbAlterar.Size = new System.Drawing.Size(68, 83);
             this.tbAlterar.Text = "Alterar";
             this.tbAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbAlterar.ToolTipText = "Clique para alterar um registro";
@@ -199,7 +199,7 @@
             this.tbExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbExcluir.Name = "tbExcluir";
-            this.tbExcluir.Size = new System.Drawing.Size(68, 81);
+            this.tbExcluir.Size = new System.Drawing.Size(68, 83);
             this.tbExcluir.Text = "Excluir  Linhas";
             this.tbExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbExcluir.ToolTipText = "Clique para excluir um registro";
@@ -210,7 +210,7 @@
             this.tbImprimir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbImprimir.Name = "tbImprimir";
-            this.tbImprimir.Size = new System.Drawing.Size(68, 81);
+            this.tbImprimir.Size = new System.Drawing.Size(68, 83);
             this.tbImprimir.Text = "Imprimir";
             this.tbImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbImprimir.ToolTipText = "Clique para imprimir ";
@@ -255,7 +255,7 @@
             "Produto especifico."});
             this.comboBox1.Location = new System.Drawing.Point(4, 64);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(16, 21);
+            this.comboBox1.Size = new System.Drawing.Size(18, 21);
             this.comboBox1.TabIndex = 2;
             // 
             // panel4
@@ -266,7 +266,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(0, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(22, 39);
+            this.panel4.Size = new System.Drawing.Size(24, 39);
             this.panel4.TabIndex = 116;
             // 
             // label3
@@ -277,7 +277,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 36);
+            this.label3.Size = new System.Drawing.Size(136, 36);
             this.label3.TabIndex = 96;
             this.label3.Text = "RELATÓRIO";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -318,7 +318,7 @@
             "Produto especifico."});
             this.comboBox2.Location = new System.Drawing.Point(4, 108);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(16, 21);
+            this.comboBox2.Size = new System.Drawing.Size(18, 21);
             this.comboBox2.TabIndex = 118;
             // 
             // splitContainer1

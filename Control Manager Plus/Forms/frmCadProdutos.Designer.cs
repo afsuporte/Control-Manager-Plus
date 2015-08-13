@@ -31,17 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ToolStrip toolStrip1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadProdutos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tbIncluir = new System.Windows.Forms.ToolStripButton();
             this.tbAlterar = new System.Windows.Forms.ToolStripButton();
             this.tbExcluir = new System.Windows.Forms.ToolStripButton();
             this.tbAtualizar = new System.Windows.Forms.ToolStripButton();
             this.tbImprimir = new System.Windows.Forms.ToolStripButton();
             this.tbVoltar = new System.Windows.Forms.ToolStripButton();
-            this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdbDesc = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.rdbCresc = new System.Windows.Forms.RadioButton();
@@ -87,9 +86,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             toolStrip1 = new System.Windows.Forms.ToolStrip();
             toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -101,6 +101,7 @@
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -134,7 +135,7 @@
             this.tbIncluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbIncluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbIncluir.Name = "tbIncluir";
-            this.tbIncluir.Size = new System.Drawing.Size(68, 81);
+            this.tbIncluir.Size = new System.Drawing.Size(68, 83);
             this.tbIncluir.Text = "Incluir";
             this.tbIncluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbIncluir.ToolTipText = "Clique parar incluir um registro";
@@ -146,7 +147,7 @@
             this.tbAlterar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbAlterar.Name = "tbAlterar";
-            this.tbAlterar.Size = new System.Drawing.Size(68, 81);
+            this.tbAlterar.Size = new System.Drawing.Size(68, 83);
             this.tbAlterar.Text = "Alterar";
             this.tbAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbAlterar.ToolTipText = "Clique para alterar um registro";
@@ -158,7 +159,7 @@
             this.tbExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbExcluir.Name = "tbExcluir";
-            this.tbExcluir.Size = new System.Drawing.Size(68, 81);
+            this.tbExcluir.Size = new System.Drawing.Size(68, 83);
             this.tbExcluir.Text = "Excluir";
             this.tbExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbExcluir.ToolTipText = "Clique para excluir um registro";
@@ -170,7 +171,7 @@
             this.tbAtualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbAtualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbAtualizar.Name = "tbAtualizar";
-            this.tbAtualizar.Size = new System.Drawing.Size(68, 81);
+            this.tbAtualizar.Size = new System.Drawing.Size(68, 83);
             this.tbAtualizar.Text = "Atualizar";
             this.tbAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbAtualizar.ToolTipText = "Clique para Atualizar os registros";
@@ -181,7 +182,7 @@
             this.tbImprimir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbImprimir.Name = "tbImprimir";
-            this.tbImprimir.Size = new System.Drawing.Size(68, 81);
+            this.tbImprimir.Size = new System.Drawing.Size(68, 83);
             this.tbImprimir.Text = "Imprimir";
             this.tbImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbImprimir.ToolTipText = "Clique para imprimir ";
@@ -193,14 +194,10 @@
             this.tbVoltar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tbVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbVoltar.Name = "tbVoltar";
-            this.tbVoltar.Size = new System.Drawing.Size(68, 81);
+            this.tbVoltar.Size = new System.Drawing.Size(68, 83);
             this.tbVoltar.Text = "Voltar";
             this.tbVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbVoltar.ToolTipText = "Retornar a tela anterior";
-            // 
-            // ProdutosBindingSource
-            // 
-            this.ProdutosBindingSource.DataSource = typeof(Control_Manager_Plus.Classes.Produtos);
             // 
             // rdbDesc
             // 
@@ -371,8 +368,8 @@
             // 
             // dtgProdutos
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtgProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtgProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -386,14 +383,14 @@
             this.Column3,
             this.Column4,
             this.Column6});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgProdutos.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgProdutos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProdutos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtgProdutos.Location = new System.Drawing.Point(2, 147);
             this.dtgProdutos.Name = "dtgProdutos";
@@ -407,8 +404,8 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "P_Id";
-            dataGridViewCellStyle11.NullValue = "00000000";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.NullValue = "00000000";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column1.FillWeight = 80F;
             this.Column1.Frozen = true;
             this.Column1.HeaderText = "Código";
@@ -462,6 +459,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn01);
             this.groupBox1.Controls.Add(this.btn02);
             this.groupBox1.Controls.Add(this.cbxSelecionaFornecedor);
@@ -508,8 +506,8 @@
             // 
             // cbxSelecionaFornecedor
             // 
-            this.cbxSelecionaFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxSelecionaFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.cbxSelecionaFornecedor.BackColor = System.Drawing.Color.LemonChiffon;
             this.cbxSelecionaFornecedor.FormattingEnabled = true;
             this.cbxSelecionaFornecedor.Location = new System.Drawing.Point(239, 72);
@@ -649,7 +647,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(1, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(14, 39);
+            this.panel4.Size = new System.Drawing.Size(16, 39);
             this.panel4.TabIndex = 116;
             // 
             // label3
@@ -660,7 +658,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 36);
+            this.label3.Size = new System.Drawing.Size(136, 36);
             this.label3.TabIndex = 96;
             this.label3.Text = "RELATÓRIO";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -705,7 +703,7 @@
             "Produto especifico."});
             this.cbxTipoRelatorio.Location = new System.Drawing.Point(4, 64);
             this.cbxTipoRelatorio.Name = "cbxTipoRelatorio";
-            this.cbxTipoRelatorio.Size = new System.Drawing.Size(14, 21);
+            this.cbxTipoRelatorio.Size = new System.Drawing.Size(16, 21);
             this.cbxTipoRelatorio.TabIndex = 2;
             // 
             // cbxSelecionarProduto
@@ -718,16 +716,16 @@
             "Produto especifico."});
             this.cbxSelecionarProduto.Location = new System.Drawing.Point(4, 108);
             this.cbxSelecionarProduto.Name = "cbxSelecionarProduto";
-            this.cbxSelecionarProduto.Size = new System.Drawing.Size(14, 21);
+            this.cbxSelecionarProduto.Size = new System.Drawing.Size(16, 21);
             this.cbxSelecionarProduto.TabIndex = 118;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.ProdutosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.ProdutosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Control_Manager_Plus.Relatorio.Produto.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
@@ -770,6 +768,20 @@
             this.panel1.Size = new System.Drawing.Size(76, 604);
             this.panel1.TabIndex = 118;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(519, 74);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 23);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Fornecedor";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ProdutosBindingSource
+            // 
+            this.ProdutosBindingSource.DataSource = typeof(Control_Manager_Plus.Classes.Produtos);
+            // 
             // frmCadProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -783,7 +795,6 @@
             this.Load += new System.EventHandler(this.frmCadProdutos_Load);
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -800,6 +811,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProdutosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -858,5 +870,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button button1;
     }
 }

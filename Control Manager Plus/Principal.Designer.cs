@@ -59,7 +59,8 @@
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -69,12 +70,15 @@
             this.toolStrip_Fornecedores = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip_Financeiro = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip_Relatorios = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip_Manutencao = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip_Sair = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip_Relatorios = new System.Windows.Forms.ToolStripDropDownButton();
+            this.vendasPorFornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendasPorLojaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
@@ -86,6 +90,7 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.viewMenu,
+            this.relatórioToolStripMenuItem,
             this.toolsMenu,
             this.windowsMenu,
             this.helpMenu});
@@ -304,18 +309,25 @@
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
             this.statusStrip.Location = new System.Drawing.Point(0, 719);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1016, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
-            // toolStripStatusLabel
+            // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
-            this.toolStripStatusLabel.Text = "Status";
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(190, 17);
+            this.toolStripStatusLabel1.Text = "AF Suporte Automação Comercial ";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(334, 17);
+            this.toolStripStatusLabel2.Text = "    Suporte Tel.: (21) 3579-4734   (21) 3624-7589   (21) 7847-6604";
             // 
             // toolStrip
             // 
@@ -407,16 +419,6 @@
             this.toolStrip_Financeiro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStrip_Financeiro.Click += new System.EventHandler(this.toolStrip_Financeiro_Click);
             // 
-            // toolStrip_Relatorios
-            // 
-            this.toolStrip_Relatorios.Image = ((System.Drawing.Image)(resources.GetObject("toolStrip_Relatorios.Image")));
-            this.toolStrip_Relatorios.ImageTransparentColor = System.Drawing.Color.White;
-            this.toolStrip_Relatorios.Name = "toolStrip_Relatorios";
-            this.toolStrip_Relatorios.Size = new System.Drawing.Size(71, 85);
-            this.toolStrip_Relatorios.Text = "Relatórios";
-            this.toolStrip_Relatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStrip_Relatorios.Click += new System.EventHandler(this.toolStrip_Relatorios_Click);
-            // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
@@ -461,6 +463,39 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // relatórioToolStripMenuItem
+            // 
+            this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
+            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.relatórioToolStripMenuItem.Text = "Relatório";
+            // 
+            // toolStrip_Relatorios
+            // 
+            this.toolStrip_Relatorios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vendasPorFornecedorToolStripMenuItem,
+            this.vendasPorLojaToolStripMenuItem});
+            this.toolStrip_Relatorios.Image = ((System.Drawing.Image)(resources.GetObject("toolStrip_Relatorios.Image")));
+            this.toolStrip_Relatorios.ImageTransparentColor = System.Drawing.Color.White;
+            this.toolStrip_Relatorios.Name = "toolStrip_Relatorios";
+            this.toolStrip_Relatorios.Size = new System.Drawing.Size(80, 85);
+            this.toolStrip_Relatorios.Text = "Relatórios";
+            this.toolStrip_Relatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStrip_Relatorios.Click += new System.EventHandler(this.toolStrip_Relatorios_Click);
+            // 
+            // vendasPorFornecedorToolStripMenuItem
+            // 
+            this.vendasPorFornecedorToolStripMenuItem.Name = "vendasPorFornecedorToolStripMenuItem";
+            this.vendasPorFornecedorToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.vendasPorFornecedorToolStripMenuItem.Text = "Vendas por Fornecedor";
+            this.vendasPorFornecedorToolStripMenuItem.Click += new System.EventHandler(this.vendasPorFornecedorToolStripMenuItem_Click);
+            // 
+            // vendasPorLojaToolStripMenuItem
+            // 
+            this.vendasPorLojaToolStripMenuItem.Name = "vendasPorLojaToolStripMenuItem";
+            this.vendasPorLojaToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.vendasPorLojaToolStripMenuItem.Text = "Vendas por Loja";
+            this.vendasPorLojaToolStripMenuItem.Click += new System.EventHandler(this.vendasPorLojaToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,8 +508,9 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Manager Plus  -  Sistema de Gerenciamento e Controle de Distribuição Hort" +
-    "ifruti    Ver.: 1.1   Build 11082015";
+    "ifruti    Ver.: 1.3   Build 12082015";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
@@ -494,7 +530,6 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMenu;
@@ -520,7 +555,6 @@
         private System.Windows.Forms.ToolStripButton toolStrip_Fornecedores;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStrip_Financeiro;
-        private System.Windows.Forms.ToolStripButton toolStrip_Relatorios;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.ToolStripButton toolStrip_Manutencao;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
@@ -536,6 +570,12 @@
         private System.Windows.Forms.ToolStripMenuItem unidadesMedidasToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton toolStrip_Relatorios;
+        private System.Windows.Forms.ToolStripMenuItem vendasPorFornecedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendasPorLojaToolStripMenuItem;
     }
 }
 

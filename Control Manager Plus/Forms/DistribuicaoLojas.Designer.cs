@@ -65,6 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExcluirLinhas = new System.Windows.Forms.Button();
             this.dtgLojas = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Loja = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,7 +112,6 @@
             this.lbTotal = new System.Windows.Forms.Label();
             this.btnGravarDistribuicao = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnExcluirLinhas = new System.Windows.Forms.Button();
             this.lbAtencao = new System.Windows.Forms.Label();
             this.lbExluir1 = new System.Windows.Forms.Label();
             this.lbExluir2 = new System.Windows.Forms.Label();
@@ -376,6 +376,17 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Distribuiçao";
+            // 
+            // btnExcluirLinhas
+            // 
+            this.btnExcluirLinhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluirLinhas.Location = new System.Drawing.Point(346, 10);
+            this.btnExcluirLinhas.Name = "btnExcluirLinhas";
+            this.btnExcluirLinhas.Size = new System.Drawing.Size(141, 40);
+            this.btnExcluirLinhas.TabIndex = 11;
+            this.btnExcluirLinhas.Text = "Excluir Selecionados";
+            this.btnExcluirLinhas.UseVisualStyleBackColor = true;
+            this.btnExcluirLinhas.Click += new System.EventHandler(this.btnExcluirLinhas_Click);
             // 
             // dtgLojas
             // 
@@ -865,17 +876,6 @@
             this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnExcluirLinhas
-            // 
-            this.btnExcluirLinhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluirLinhas.Location = new System.Drawing.Point(346, 10);
-            this.btnExcluirLinhas.Name = "btnExcluirLinhas";
-            this.btnExcluirLinhas.Size = new System.Drawing.Size(141, 40);
-            this.btnExcluirLinhas.TabIndex = 11;
-            this.btnExcluirLinhas.Text = "Excluir Selecionados";
-            this.btnExcluirLinhas.UseVisualStyleBackColor = true;
-            this.btnExcluirLinhas.Click += new System.EventHandler(this.btnExcluirLinhas_Click);
-            // 
             // lbAtencao
             // 
             this.lbAtencao.AutoSize = true;
@@ -978,7 +978,7 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Location = new System.Drawing.Point(0, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(34, 39);
+            this.panel4.Size = new System.Drawing.Size(36, 39);
             this.panel4.TabIndex = 116;
             // 
             // label8
@@ -1034,7 +1034,7 @@
             "Produto especifico."});
             this.comboBox1.Location = new System.Drawing.Point(4, 64);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(24, 21);
+            this.comboBox1.Size = new System.Drawing.Size(26, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -1048,7 +1048,7 @@
             "Produto especifico."});
             this.comboBox2.Location = new System.Drawing.Point(4, 108);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(24, 21);
+            this.comboBox2.Size = new System.Drawing.Size(26, 21);
             this.comboBox2.TabIndex = 118;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
